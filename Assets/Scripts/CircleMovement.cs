@@ -8,6 +8,8 @@ public class CircleMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D circleMovement;
 
+    public float bounceForce = 5f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,23 +40,38 @@ public class CircleMovement : MonoBehaviour
     {
         Vector2 circleCenter = (Vector2)transform.position;
         Vector2 direction = (mousePosition - circleCenter).normalized;
+        float distance = Vector2.Distance(mousePosition, circleCenter);
+        float circleRadius = GetComponent<CircleCollider2D>().radius * transform.localScale.x;
 
-        if (direction.y > 0) // Upper part of the circle
+        if (distance < circleRadius)
         {
-            rb.velocity = new Vector2(rb.velocity.x, -moveSpeed);
-        }
-        else if (direction.y < 0) // Bottom part of the circle
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            // Clicked inside the circle
+            if (Mathf.Abs(direction.x) < 0.5f && direction.y > 0.5f) // Middle part of the circle
+            {
+                rb.velocity = new Vector2(rb.velocity.x, bounceForce);
+            }
+            else
+            {
+                if (direction.y > 0) // Upper part of the circle
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, -moveSpeed);
+                }
+                else if (direction.y < 0) // Bottom part of the circle
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
+
+                if (direction.x < 0) // Left side of the circle
+                {
+                    rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+                }
+                else if (direction.x > 0) // Right side of the circle
+                {
+                    rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+                }
+
+            }
         }
 
-        if (direction.x < 0) // Left side of the circle
-        {
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-        }
-        else if (direction.x > 0) // Right side of the circle
-        {
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-        }
     }
 }
