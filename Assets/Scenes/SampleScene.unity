@@ -27253,6 +27253,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -27303,7 +27304,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.771867
+  orthographic size: 6.201459
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27348,6 +27349,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 519420028}
   cameraSpeed: 20
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7c3834520f0be4aab7f8cba25b573f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 10
+  yOffset: 1
+  target: {fileID: 853607708}
+  xLimits: {x: -10, y: 10}
+  yLimits: {x: -10, y: 10}
 --- !u!1 &645869467
 GameObject:
   m_ObjectHideFlags: 0
@@ -27949,7 +27967,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &853607711
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27982,9 +28000,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023251414, y: 0.19763792}
+  m_Offset: {x: -0.03422445, y: 0.20546311}
   serializedVersion: 2
-  m_Radius: 0.5796943
+  m_Radius: 0.6514439
 --- !u!1 &1233323740
 GameObject:
   m_ObjectHideFlags: 0
