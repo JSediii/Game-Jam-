@@ -6,6 +6,10 @@ public class Penalty : MonoBehaviour
 {
     public float life = 5f;
     public GameObject penaltyWall;
+
+    public GameObject characterKnight;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +26,12 @@ public class Penalty : MonoBehaviour
     {
         life -= 1;
 
+        Debug.Log("Life Left: " + life);
+
         if (life == 0)
         {
             Debug.Log("DEAD");
-
+            characterKnight.SetActive(false);
         }
     }
 }

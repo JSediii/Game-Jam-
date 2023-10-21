@@ -27853,6 +27853,7 @@ GameObject:
   - component: {fileID: 853607709}
   - component: {fileID: 853607710}
   - component: {fileID: 853607711}
+  - component: {fileID: 853607712}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -28003,6 +28004,21 @@ CircleCollider2D:
   m_Offset: {x: -0.03422445, y: 0.20546311}
   serializedVersion: 2
   m_Radius: 0.6514439
+--- !u!114 &853607712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853607706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927761a7f6ef8774d9903dbc89308f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 5
+  penaltyWall: {fileID: 1233323740}
+  characterKnight: {fileID: 853607706}
 --- !u!1 &1233323740
 GameObject:
   m_ObjectHideFlags: 0
