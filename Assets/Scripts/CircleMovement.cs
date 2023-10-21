@@ -26,6 +26,14 @@ public class CircleMovement : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        Vector2 velocity = rb.velocity;
+        velocity.x = Mathf.Lerp(velocity.x, 0, 0);
+        velocity.y = Mathf.Lerp(velocity.y, 0, 0);
+        rb.velocity = velocity;
+    }
+
     private void HandleMovement(Vector2 mousePosition)
     {
         Vector2 circleCenter = (Vector2)transform.position;

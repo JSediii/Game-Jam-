@@ -18,4 +18,9 @@ public class CameraFollow : MonoBehaviour
 
         transform.position = newPosition;
     }
+
+    void Start()
+    {
+        Application.targetFrameRate = 70;
+    }
 }

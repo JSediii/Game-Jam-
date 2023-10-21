@@ -28088,8 +28088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9a1998473dd08488993349d69e87dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 12.5
+  moveSpeed: 5
+  jumpForce: 5
 --- !u!50 &853607710
 Rigidbody2D:
   serializedVersion: 4
@@ -28164,7 +28164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927761a7f6ef8774d9903dbc89308f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 10
   penaltyWall: {fileID: 1233323740}
   characterKnight: {fileID: 853607706}
 --- !u!1 &1233323740
