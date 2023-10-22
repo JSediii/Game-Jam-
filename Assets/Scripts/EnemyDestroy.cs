@@ -11,7 +11,6 @@ public class EnemyDestroy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
 
 

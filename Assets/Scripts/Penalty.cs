@@ -8,6 +8,7 @@ public class Penalty : MonoBehaviour
     public GameObject penaltyWall;
 
     public GameObject characterKnight;
+    public GameObject characterEnemy;
 
 
     // Start is called before the first frame update
@@ -24,14 +25,20 @@ public class Penalty : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        life -= 1;
-
-        Debug.Log("Life Left: " + life);
-
-        if (life == 0)
+        if (collision.collider.CompareTag("EnemyCollide"))
+        {
+            life += 1;
+            Destroy(characterEnemy);
+        }
+        else if (life == 0)
         {
             Debug.Log("DEAD");
             characterKnight.SetActive(false);
         }
+        else
+        {
+            life -= 1;
+        }
+        Debug.Log("Life Left: " + life);
     }
 }
