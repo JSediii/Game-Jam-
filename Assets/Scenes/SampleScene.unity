@@ -26889,7 +26889,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.201459
+  orthographic size: 7.8792953
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27611,7 +27611,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27640,7 +27640,7 @@ Transform:
   m_GameObject: {fileID: 1217451995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.21, y: -1.81, z: 1.0231787}
+  m_LocalPosition: {x: 19.64, y: -1.69, z: 1.0231787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27722,7 +27722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e845dcaca7fc92341be0ef566e777095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 5
+  spawnRate: 4
   enemyPrefabs:
   - {fileID: 2081221908}
   canSpawn: 1
@@ -27735,7 +27735,7 @@ Transform:
   m_GameObject: {fileID: 1441754646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.72, y: 5.94, z: 1.0231787}
+  m_LocalPosition: {x: -9.41, y: 1.7, z: 1.0231787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27753,6 +27753,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 853607706}
+    - target: {fileID: -1018949709291557666, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
+      propertyPath: minDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7795777913858743324, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -27812,7 +27816,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: player
@@ -27820,7 +27824,7 @@ PrefabInstance:
       objectReference: {fileID: 853607706}
     - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: minDistance
-      value: 6
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5829508209125447222, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: m_LocalPosition.x
