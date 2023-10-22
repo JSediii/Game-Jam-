@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIFollow : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-
     public GameObject player;
-    public float followSpeed;
-    private float distance;
+    public float minDistance = 5.0f;
+    public float speed = 3.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    private Transform playerTransform;
+
+    private void Start()
     {
-
+        playerTransform = player.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-    
-        if (distance < 6) //conditional statement if the player is close to enemy, then enemy will follow the player
+        float distance = Vector3.Distance(transform.position, playerTransform.position);
+
+        if (distance < minDistance)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, followSpeed * Time.deltaTime);
+            Vector3 direction = (transform.position - playerTransform.position).normalized;
+            Vector3 moveVector = direction * speed * Time.fixedDeltaTime;
+            transform.position += moveVector;
         }
     }
 }
+
