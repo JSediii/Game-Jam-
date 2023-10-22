@@ -27740,6 +27740,10 @@ PrefabInstance:
       propertyPath: minDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -1018949709291557666, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
+      propertyPath: characterEnemy
+      value: 
+      objectReference: {fileID: 465439269}
     - target: {fileID: 7795777913858743324, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
       propertyPath: m_Name
       value: Enemy
