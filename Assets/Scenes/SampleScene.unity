@@ -27409,7 +27409,6 @@ GameObject:
   - component: {fileID: 853607710}
   - component: {fileID: 853607711}
   - component: {fileID: 853607712}
-  - component: {fileID: 853607713}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -27478,7 +27477,7 @@ Transform:
   m_GameObject: {fileID: 853607706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55, y: -0.28, z: 0}
+  m_LocalPosition: {x: 0.72, y: 6.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27496,7 +27495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9a1998473dd08488993349d69e87dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   jumpForce: 9.5
   bounceForce: 8.2
 --- !u!50 &853607710
@@ -27510,11 +27509,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 3.256283
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -27577,27 +27576,6 @@ MonoBehaviour:
   penaltyWall: {fileID: 1233323740}
   characterKnight: {fileID: 853607706}
   characterEnemy: {fileID: 0}
---- !u!95 &853607713
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853607706}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3464361cadf24df4899a1c5519079fd8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1217451995
 GameObject:
   m_ObjectHideFlags: 0
@@ -27630,7 +27608,6 @@ MonoBehaviour:
   spawnRate: 5
   enemyPrefabs:
   - {fileID: 465439269}
-  canSpawn: 1
 --- !u!4 &1217451997
 Transform:
   m_ObjectHideFlags: 0
@@ -27640,7 +27617,7 @@ Transform:
   m_GameObject: {fileID: 1217451995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.64, y: -1.69, z: 1.0231787}
+  m_LocalPosition: {x: 18.11, y: -1.69, z: 1.0231787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27722,10 +27699,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e845dcaca7fc92341be0ef566e777095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 4
+  spawnRate: 3
   enemyPrefabs:
   - {fileID: 2081221908}
-  canSpawn: 1
+  - {fileID: 2081221908}
+  - {fileID: 2081221908}
+  - {fileID: 2081221908}
 --- !u!4 &1441754648
 Transform:
   m_ObjectHideFlags: 0
@@ -27735,7 +27714,7 @@ Transform:
   m_GameObject: {fileID: 1441754646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.41, y: 1.7, z: 1.0231787}
+  m_LocalPosition: {x: -0.01, y: -2.15, z: 1.0231787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27749,6 +27728,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1018949709291557666, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -1018949709291557666, guid: e2d11a894ca3a9243aee9ae7b78a6170, type: 3}
       propertyPath: player
       value: 
@@ -27819,6 +27802,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
+      propertyPath: timer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 853607706}
@@ -27826,6 +27813,10 @@ PrefabInstance:
       propertyPath: minDistance
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1915501435537479109, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
+      propertyPath: characterEnemy
+      value: 
+      objectReference: {fileID: 465439269}
     - target: {fileID: 5829508209125447222, guid: 2387c52a4008fdc4580b0e25de144b9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.5

@@ -7,7 +7,6 @@ public class EnemyMovement : MonoBehaviour
     public GameObject player;
     public float minDistance = 5.0f;
     public float speed = 3.0f;
-
     private Transform playerTransform;
 
     private void Start()

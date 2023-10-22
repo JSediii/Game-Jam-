@@ -46,9 +46,9 @@ public class CircleMovement : MonoBehaviour
         if (distance < circleRadius)
         {
             // Clicked inside the circle
-            if (Mathf.Abs(direction.x) < 0.5f && direction.y > 0.5f) // Middle part of the circle
+            if (Mathf.Abs(direction.x) < 0.5f && direction.y > 0f) // Middle part of the circle
             {
-                rb.velocity = new Vector2(rb.velocity.x, bounceForce);
+                rb.velocity = new Vector2(rb.velocity.y, bounceForce);
             }
             else
             {

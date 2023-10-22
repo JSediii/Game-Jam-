@@ -6,7 +6,6 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private float spawnRate = 1f;
     [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private bool canSpawn = true;
     
     private void Start(){
 
