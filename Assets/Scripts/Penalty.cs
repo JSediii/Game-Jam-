@@ -30,7 +30,7 @@ public class Penalty : MonoBehaviour
             life += 1;
             Destroy(characterEnemy);
         }
-        else if (life == 0)
+        else if (life == 1)
         {
             Debug.Log("DEAD");
             characterKnight.SetActive(false);
