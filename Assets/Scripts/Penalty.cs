@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Penalty : MonoBehaviour
 {
-    public float life = 5f;
     public GameObject penaltyWall;
 
     public GameObject characterKnight;
@@ -18,20 +17,24 @@ public class Penalty : MonoBehaviour
     {
         if (collision.collider.CompareTag("EnemyCollide"))
         {
-            life += 1;
+            HealthManager.health++;
+            if (HealthManager.health >= 5)
+            {
+                HealthManager.health = 5;
+            }
             Destroy(characterEnemy);
         }
-        else if (life == 1)
+        else if (HealthManager.health == 1)
         {
+            HealthManager.health = 0;
             Debug.Log("DEAD");
             deathSound.Play();
-            characterKnight.SetActive(false);
+            Time.timeScale = 0;
         }
         else
         {
+            HealthManager.health--;
             hurtSound.Play();
-            life -= 1;
         }
-        Debug.Log("Life Left: " + life);
     }
 }
