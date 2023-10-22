@@ -10,6 +10,8 @@ public class CircleMovement : MonoBehaviour
 
     public float bounceForce = 5f;
 
+    [SerializeField] private AudioSource jumpSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,7 @@ public class CircleMovement : MonoBehaviour
             if (circleMovement.OverlapPoint(mousePosition))
             {
                 HandleMovement(mousePosition);
+                jumpSound.Play();
             }
         }
     }
