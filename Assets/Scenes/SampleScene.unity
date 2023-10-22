@@ -27854,6 +27854,7 @@ GameObject:
   - component: {fileID: 853607710}
   - component: {fileID: 853607711}
   - component: {fileID: 853607712}
+  - component: {fileID: 853607713}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -27907,7 +27908,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.857143, y: 2.857143}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27941,8 +27942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 5
-  bounceForce: 7
+  jumpForce: 9.5
+  bounceForce: 8.2
 --- !u!50 &853607710
 Rigidbody2D:
   serializedVersion: 4
@@ -28002,9 +28003,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03422445, y: 0.20546311}
+  m_Offset: {x: -0.04295385, y: 0.24911141}
   serializedVersion: 2
-  m_Radius: 0.6514439
+  m_Radius: 1.0180899
 --- !u!114 &853607712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28021,6 +28022,59 @@ MonoBehaviour:
   penaltyWall: {fileID: 1233323740}
   characterKnight: {fileID: 853607706}
   characterEnemy: {fileID: 0}
+--- !u!95 &853607713
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853607706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3464361cadf24df4899a1c5519079fd8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1054493128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7795777913858743324, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
+  m_PrefabInstance: {fileID: 7996460271899677119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1054493134
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054493128}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 1.7585623
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1233323740
 GameObject:
   m_ObjectHideFlags: 0
@@ -28080,17 +28134,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 853607706}
+    - target: {fileID: 5495355655812524028, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
+      propertyPath: pathway
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7795777913858743324, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8825078270496195849, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.11
+      value: 15.69
       objectReference: {fileID: 0}
     - target: {fileID: 8825078270496195849, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 8825078270496195849, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28127,7 +28185,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7795777913858743324, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1054493134}
   m_SourcePrefab: {fileID: 100100000, guid: feb3ab7c523491e4bae2fcd1f0b29f2b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
