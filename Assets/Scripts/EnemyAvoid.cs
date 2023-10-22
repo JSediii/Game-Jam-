@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyAvoid : MonoBehaviour
 {
     public GameObject player;
     public float minDistance = 5.0f;
@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Vector3 direction = (transform.position - playerTransform.position).normalized;
             Vector3 moveVector = direction * speed * Time.fixedDeltaTime;
-            transform.position -= moveVector;
+            transform.position += moveVector;
         }
     }
 }
