@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Penalty : MonoBehaviour
 {
     public GameObject penaltyWall;
-
     public GameObject characterKnight;
     public GameObject characterEnemy;
 
@@ -15,6 +15,9 @@ public class Penalty : MonoBehaviour
 
     public int playerScore;
     public Text scoretext;
+
+    public GameObject gameOverScreen;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("EnemyCollide"))
@@ -32,6 +35,7 @@ public class Penalty : MonoBehaviour
             HealthManager.health = 0;
             Debug.Log("DEAD");
             deathSound.Play();
+            gameOver();
             Time.timeScale = 0;
         }
         else
@@ -45,5 +49,14 @@ public class Penalty : MonoBehaviour
     {
         playerScore += scoreToAdd;
         scoretext.text = playerScore.ToString();
+    }
+
+    public void gameOver()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Application.Quit();
+        }
+        gameOverScreen.SetActive(true);
     }
 }
